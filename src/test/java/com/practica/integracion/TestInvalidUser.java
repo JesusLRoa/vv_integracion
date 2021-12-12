@@ -69,12 +69,6 @@ public class TestInvalidUser {
 		ordered.verify(mockGenericDao).getSomeData(null, "where id=" + validId);
 	}
 
-	/*
-	Para addRemoteSystem realizamos las pruebas con usuario inválido y remote válido,
-	y usuario válido y remote inválido.
-	No realizamos con ambos inválidos ya que el caso es el mismo que si tuvieramos remote válido
-	*/
-
 	@Test
 	public void testAddRemoteSystemInvalidUser() throws Exception {
 		String remote = "remote";
@@ -97,12 +91,6 @@ public class TestInvalidUser {
 		ordered.verify(mockAuthDao).getAuthData(invalidUser.getId());
 		ordered.verify(mockGenericDao).updateSomeData(invalidUser, remote);
 	}
-
-	/*
-	Para deleteRemoteSystem realizamos las pruebas con usuario inválido y remote válido,
-	y usuario válido y remote inválido.
-	No realizamos con ambos inválidos ya que el caso es el mismo que si tuvieramos remote válido
-	*/
 
 	@Test
 	public void testDeleteRemoteSystemInvalidUser() throws Exception {
