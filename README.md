@@ -8,3 +8,6 @@ GRUPO IWM-42 Grupo 7
 * Descargar el proyecto utilizando git clone desde el terminal o desde el IDE.
 * Seguir las indicaciones del enunciado para realizar las pruebas de integración
 * Modificar este fichero añadiendo el número de grupo correspondiente y las instrucciones para ejecutar la práctica
+
+
+Para ejecutar los test de la practica bastaria con ejecutar las dos clases TestInvalidUser.java y TestValidUser.java sin importar el orden y tras esto se ejecutaran todos los tests necesarios para probar el correcto funcionamiento del sistema
