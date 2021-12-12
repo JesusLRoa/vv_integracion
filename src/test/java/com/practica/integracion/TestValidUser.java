@@ -4,7 +4,6 @@ import com.practica.integracion.DAO.AuthDAO;
 import com.practica.integracion.DAO.GenericDAO;
 import com.practica.integracion.DAO.User;
 import com.practica.integracion.manager.SystemManager;
-import com.practica.integracion.manager.SystemManagerException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -34,9 +33,9 @@ public class TestValidUser {
 	private InOrder ordered;
 
 	@BeforeEach
-	void init() throws Exception {
+	void init() {
 
-		validUser = new User("1","Ana","Lopez","Madrid", new ArrayList<Object>(Arrays.asList(1, 2)));
+		validUser = new User("1","Ana","Lopez","Madrid", new ArrayList<>(Arrays.asList(1, 2)));
 		when(mockAuthDao.getAuthData(validUser.getId())).thenReturn(validUser);
 
 		manager = new SystemManager(mockAuthDao, mockGenericDao);
